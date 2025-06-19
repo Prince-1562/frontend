@@ -5,7 +5,6 @@ const App = () => {
 
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
-
   const handleName = (e) => {
     setName(e.target.value)
   }
@@ -15,7 +14,7 @@ const App = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let res = await axios.post('http://localhost:8000/register', [{ name: name, email: email }])
+    let res = await axios.post('https://backend-2w95.onrender.com/register', [{ name: name, email: email }])
     console.log(res);
   };
 
